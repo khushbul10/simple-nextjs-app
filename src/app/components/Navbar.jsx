@@ -9,7 +9,6 @@ import { useSession } from "next-auth/react";
 export function ThemeToggleButton() {
   const { resolvedTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const session = useSession();
 
   useEffect(() => {
     setMounted(true)
@@ -32,6 +31,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
   const lastScrollY = useRef(0)
+  
+
 
   useEffect(() => {
     const handleScroll = () => {

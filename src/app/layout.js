@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Footer from "./components/Footer";
 import ThemeToggleButton from "./components/ThemeToggleButton";
 import { Toaster } from "react-hot-toast";
+import NextAuthProvider from "@/Providers/NextAuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,10 +27,12 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="data-mode" defaultTheme="light" enableSystem>
-        <Toaster />
-          <Navbar />
-          {children}
-          <Footer />
+          <NextAuthProvider>
+            <Toaster />
+            <Navbar />
+            {children}
+            <Footer />
+          </NextAuthProvider>
         </ThemeProvider>
       </body>
     </html>

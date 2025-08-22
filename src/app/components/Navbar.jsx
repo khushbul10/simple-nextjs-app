@@ -80,12 +80,10 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link href="/dashboard" className="px-3 py-1 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
-                Dashboard
+              <Link href="/dashboard/add-product" className="px-3 py-1 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
+                Add Product
               </Link>
-              <Link href="/profile" className="px-3 py-1 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
-                Profile
-              </Link>
+              
               <button onClick={() => {
                 signOut()
                 toast("Logged Out Successfully");

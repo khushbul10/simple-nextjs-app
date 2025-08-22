@@ -3,6 +3,7 @@ import React from 'react'
 import { signIn } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
+import SocialLogin from './SocialLogin';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -43,6 +44,7 @@ export default function LoginForm() {
         <input type="password" id="password" name="password" className="w-full px-4 py-2 rounded-lg border border-lime-200 dark:border-lime-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-400" required />
       </div>
       <button type="submit" className="w-full bg-gradient-to-r from-lime-500 to-lime-600 dark:from-lime-600 dark:to-lime-700 text-white font-semibold px-4 py-2 rounded-xl shadow hover:from-lime-600 hover:to-lime-700 dark:hover:from-lime-700 dark:hover:to-lime-800 transition-all duration-200">Login</button>
+      <SocialLogin></SocialLogin>
     </form>
   )
 }

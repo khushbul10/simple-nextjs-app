@@ -10,7 +10,7 @@ export default async function ProductDetailsPage({ params }) {
   if (!product) return notFound();
 
   return (
-    <div className="min-h-screen py-10 bg-gradient-to-br from-white via-lime-50 to-lime-100 dark:from-gray-900 dark:via-gray-800 dark:to-lime-900 flex flex-col items-center">
+    <div className="min-h-screen mt-20 py-10 bg-gradient-to-br from-white via-lime-50 to-lime-100 dark:from-gray-900 dark:via-gray-800 dark:to-lime-900 flex flex-col items-center">
       <div className="w-full max-w-xl bg-white dark:bg-gray-800 border border-lime-200 dark:border-lime-700 rounded-2xl shadow-xl p-8 flex flex-col items-center">
         <img src={product.img} alt={product.name} className="w-56 h-56 object-cover rounded-xl border-2 border-lime-200 dark:border-lime-700 mb-6" />
         <h1 className="text-3xl font-bold mb-2 text-lime-700 dark:text-lime-400 text-center">{product.name}</h1>

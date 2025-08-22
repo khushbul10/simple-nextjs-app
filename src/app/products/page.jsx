@@ -9,7 +9,7 @@ export default async function ProductsPage() {
   const products = data?.data;
   console.log(products);
   return (
-    <div className="min-h-screen py-8 bg-gradient-to-br from-white via-lime-50 to-lime-100 dark:from-gray-900 dark:via-gray-800 dark:to-lime-900 transition-colors">
+    <div className="min-h-screen mt-20 py-8 bg-gradient-to-br from-white via-lime-50 to-lime-100 dark:from-gray-900 dark:via-gray-800 dark:to-lime-900 transition-colors">
       <h1 className="text-4xl font-extrabold mb-10 text-center text-lime-700 dark:text-lime-400 tracking-tight drop-shadow-lg">Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4">
         {products?.map(product => (

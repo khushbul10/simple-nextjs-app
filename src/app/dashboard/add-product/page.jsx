@@ -1,8 +1,20 @@
 "use client";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import CheckUser from "./components/CheckUser";
+import { useSession } from "next-auth/react";
+import Loading from "@/app/loading";
 
-export default function AddProductPage() {
+export default async function AddProductPage() {
+  const { data: session, status } = useSession();
+  if(status === "loading") {
+    return <Loading />;
+  }
+  if(status === "unauthenticated") {
+    redirect("/login");
+  }
   const [form, setForm] = useState({
     name: "",
     category: "",

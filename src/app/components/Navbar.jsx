@@ -130,11 +130,8 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <Link href="/dashboard" onClick={() => setIsOpen(false)} className="px-3 py-2 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
-                  Dashboard
-                </Link>
-                <Link href="/profile" onClick={() => setIsOpen(false)} className="px-3 py-2 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
-                  Profile
+                <Link href="/dashboard/add-product" onClick={() => setIsOpen(false)} className="px-3 py-2 rounded-xl font-medium text-lime-700 bg-lime-100 hover:bg-lime-200 hover:text-lime-900 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400">
+                  Add Product
                 </Link>
                 <button className="px-3 py-2 rounded-xl font-medium text-white bg-red-500 hover:bg-red-600 shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-400" onClick={() => {/* TODO: Add logout logic */ }}>
                   Logout
